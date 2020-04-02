@@ -18,13 +18,29 @@
  *
 */
 
+const navItems = document.getElementsByTagName('section');
+const navigationMenu = document.getElementById('navbar_list');
 
-/**
- * End Global Variables
- * Start Helper Functions
- *
-*/
+// /**
+//  * End Global Variables
+//  * Start Helper Functions
+//  *
+// */
 
+function menu() {
+
+  for (let navItem of navItems) {
+    const newLi = document.createElement('li');
+    const newA = document.createElement('a');
+    let dataNav = navItem.dataset.nav;
+    let link = document.createTextNode(dataNav);
+    newA.appendChild(link);
+    newA.title = dataNav;
+    newA.href = #;
+    newLi.appendChild(newA);
+    navigationMenu.appendChild(newLi);
+  }
+}
 
 
 /**
@@ -35,11 +51,13 @@
 
 // build the nav
 
+menu();
 
 // Add class 'active' to section when near top of viewport
 
 
 // Scroll to anchor ID using scrollTO event
+
 
 
 /**

@@ -9,7 +9,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto 1fr 1fr auto 200px;
+  grid-template-rows: 50px auto 1fr 1fr auto auto;
   grid-template-areas:
     "header header header header"
     "intro intro intro intro"
@@ -21,9 +21,11 @@ body {
 
 .page_header {
   grid-area: header;
-  background-color: black;
+  display: flex;
+  background-color: green;
   position: sticky;
   top: 0;
+  color: white;
   border: 1px solid white;
 }
 
@@ -31,7 +33,26 @@ body {
   padding: 5px 0px 0px 10px;
 }
 
-.introduction {
+/* .navbar_menu {
+  grid-area: header;
+  display: flex;
+  justify-self: end;
+} */
+
+#navbar_list {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  border: 1px solid white;
+}
+
+#navbar_list li {
+  padding: 0px 10px 0px 10px;
+  text-decoration: none;
+  border: 1px solid white;
+}
+
+#introduction {
   grid-area: intro;
   display: flex;
   flex-direction: column;
@@ -42,7 +63,7 @@ body {
   color: #fff;
 }
 
-.calculator {
+#calculator {
   grid-area: calculator;
   display: flex;
   flex-direction: column;
@@ -57,7 +78,7 @@ body {
   align-items: center;
 }
 
-.expert-valuation {
+#expert-valuation {
   grid-area: expert;
   display: flex;
   flex-direction: column;
@@ -67,7 +88,7 @@ body {
   border: 1px solid white;
 }
 
-.how-does-it-work {
+#how-does-it-work {
   grid-area: how;
   display: flex;
   flex-direction: column;
@@ -94,5 +115,7 @@ body {
 
 .footer {
   grid-area: footer;
+  padding: 30px;
+  color: white;
   border: 1px solid white;
 }
