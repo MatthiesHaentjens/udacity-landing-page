@@ -27,18 +27,17 @@ const navigationMenu = document.getElementById('navbar_list');
 //  *
 // */
 
-function menu() {
+function buildMenu() {
 
   for (let navItem of navItems) {
-    const newLi = document.createElement('li');
-    const newA = document.createElement('a');
+    const li = document.createElement('li');
+    const a = document.createElement('a');
     let dataNav = navItem.dataset.nav;
     let link = document.createTextNode(dataNav);
-    newA.appendChild(link);
-    newA.title = dataNav;
-    newA.href = #;
-    newLi.appendChild(newA);
-    navigationMenu.appendChild(newLi);
+    a.appendChild(link);
+    a.href = '#'+ navItem.id;
+    li.appendChild(a);
+    navigationMenu.appendChild(li);
   }
 }
 
@@ -51,7 +50,7 @@ function menu() {
 
 // build the nav
 
-menu();
+buildMenu();
 
 // Add class 'active' to section when near top of viewport
 

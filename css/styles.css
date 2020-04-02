@@ -52,6 +52,11 @@ body {
   border: 1px solid white;
 }
 
+#navbar_list li a {
+  text-decoration: none;
+  color: white;
+}
+
 #introduction {
   grid-area: intro;
   display: flex;
