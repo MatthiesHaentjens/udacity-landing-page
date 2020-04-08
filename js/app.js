@@ -39,18 +39,17 @@ const sections = document.querySelectorAll('section');
 
 function buildMenu() {
 
-  // for each of the section names add a list item including a
-  // anchor tag referring to that section to the navigation menu
+  // for each of the section names add a list item including an
+  // eventListener referring that section to the navigation menu
   // in the header
 
   for (let navItem of navItems) {
     const li = document.createElement('li');
-    const a = document.createElement('a');
+    let id = navItem.id;
     let dataNav = navItem.dataset.nav;
-    let link = document.createTextNode(dataNav);
-    a.appendChild(link);
-    a.href = '#'+ navItem.id;
-    li.appendChild(a);
+    let link = document.createTextNode(dataNav)
+    li.appendChild(link);
+    li.addEventListener("click", function() {goToPageSection(id)});
     navigationMenu.appendChild(li);
   }
 }
@@ -86,7 +85,18 @@ function setToActive() {
 
 // Scroll to anchor ID using scrollTO event
 
+function goToPageSection(id) {
 
+  const section = document.getElementById(id);
+  const position = section.getBoundingClientRect().top
+
+  // Scroll to anchor ID
+  window.scrollTo({
+    top: position,
+    behavior: 'smooth'
+  });
+
+}
 
 /**
  * End Main Functions
@@ -99,6 +109,8 @@ function setToActive() {
 buildMenu();
 
 // Scroll to section on link click
+
+
 
 // Set sections as active
 

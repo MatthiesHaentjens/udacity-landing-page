@@ -1,6 +1,8 @@
 Interface and Architecture
 
-Architecture: The project should have a structure like the one shown below. All files shown must be present and the app must successfully render a home page with clear design and functionality added when index.html is loaded in the browser. No errors should display in console.
+Architecture: The project should have a structure like the one shown below. All files shown must be present and the
+app must successfully render a home page with clear design and functionality added when index.html is loaded in the
+browser. No errors should display in console.
 
 css
 - styles.css
@@ -8,6 +10,7 @@ index.html
 js
 - app.js
 README.md
+
 Usability
 
 All features are usable across modern desktop, tablet, and phone browsers.
@@ -18,7 +21,7 @@ HTML Structure: There are at least 4 sections that have been added to the page. 
 
 Landing Page Behavior
 
-Navigation: Navigation is built dynamically as an unordered list.
+Navigation: Navigation is built dynamically as an unordered list. - CHECK
 
 Section Active State: It should be clear which section is being viewed while scrolling through the page.
 
@@ -26,11 +29,13 @@ Scroll to Anchor: When clicking an item from the navigation menu, the link shoul
 
 Documentation
 
-README: The ReadMe file should have non-default text in it that is specific to this project. It doesn’t have to be thorough, but should have some basic information, and use correct markdown.
+README: The ReadMe file should have non-default text in it that is specific to this project.
+It doesn’t have to be thorough, but should have some basic information, and use correct markdown.
 
-Comments: Comments are present and effectively explain longer code procedure when necessary.
+Comments: Comments are present and effectively explain longer code procedure when necessary. - CHECK
 
-Code Quality: Code is formatted with consistent, logical, and easy-to-read formatting as described in the Udacity JavaScript Style Guide.
+Code Quality: Code is formatted with consistent, logical, and easy-to-read formatting as described in the
+Udacity JavaScript Style Guide.
 
 Udacity Website Project Description
 
@@ -41,15 +46,16 @@ Udacity Website Project Description
   - Which data structure can you use to store these sections? This data structure can represent all sections for your page, so it might be a good idea to save it to a variable. - CHECK
   - How you would iterate (i.e., loop) over this data structure? - CHECK
   - Think about how you can create, say, an unordered list (i.e., bulleted list) in HTML from this structure, and where you be placing that list. - CHECK
-  - Think about how you’ll test whether a section is in the viewport.
-  - What actions are you performing that will cause interactivity with the DOM?
+  - Think about how you’ll test whether a section is in the viewport. - CHECK
+  - What actions are you performing that will cause interactivity with the DOM? - CHECK
 3. Build the navigation menu. This will dynamically create a navigation menu based on the sections of the page. This can be a particularly useful trick when you begin working with content management systems or APIs when you are uncertain of the items will be.
   - Are you listening for an event for the navigation to build?
-  - Where are you placing the navigation?
-  - Where is the text for each navigation item coming from and where are you anchoring to?
-  - How are you going to add each navigation item to your menu? (Hint: there are several ways to do this. Do some research to figure out which makes the most sense for your situation. Performance? Clarity?).
+  - Where are you placing the navigation? - CHECK
+  - Where is the text for each navigation item coming from and where are you anchoring to? - CHECK
+  - How are you going to add each navigation item to your menu? - CHECK
+    (Hint: there are several ways to do this. Do some research to figure out which makes the most sense for your situation. Performance? Clarity?).
 4. Add functionality to distinguish the section in view. While navigating through the page, the section that is active in the viewport/closest to the top should be distinguished from the other sections.
-  - Are you listening for an event for sections to become active?
+  - Are you listening for an event for sections to become active? - CHECK
   - How are you going to test which section should be highlighted?
   - How can we use classList methods to change the CSS being displayed? What about removing that CSS?
   - Check the HTML and CSS files to ensure that what you chose is updated in the other locations.
