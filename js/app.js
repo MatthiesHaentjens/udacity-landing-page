@@ -65,9 +65,8 @@ function setToActive() {
     if(section.classList.contains('active')) {
       // if the section has the class active and the section is close
       // to the top return function
-      if(section.getBoundingClientRect().top < 55
+      if(section.getBoundingClientRect().top < 150
       && section.getBoundingClientRect().top > 0) {
-        return
       // if the section already has a class active but is not close
       // to the top remove the class active to make sure only the section
       // close to the top has the class acive
@@ -76,7 +75,7 @@ function setToActive() {
       };
     // if the section does not have the class active but is close to the stop
     // add the class active
-    } else if (section.getBoundingClientRect().top < 55
+  } else if (section.getBoundingClientRect().top < 150
     && section.getBoundingClientRect().top > 0) {
       section.classList.add('active');
     }
@@ -85,8 +84,9 @@ function setToActive() {
 
 // Scroll to anchor ID using scrollTO event
 
-function goToPageSection(id) {
+function goToPageSection() {
 
+  id = getId()
   const section = document.getElementById(id);
   const position = section.getBoundingClientRect().top
 
@@ -110,7 +110,7 @@ buildMenu();
 
 // Scroll to section on link click
 
-
+document.getElementById("navbar_list").li.addEventListener("click", function() {goToPageSection(id)});
 
 // Set sections as active
 
