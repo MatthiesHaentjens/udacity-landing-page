@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEEQUIP</title>
     <link href="css/styles.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css" integrity="sha256-Nfu23DiRqsrx/6B6vsI0T9vEVKq1M6KgO8+TV363g3s=" crossorigin="anonymous" /> -->
   </head>
 
   <body>
@@ -15,15 +14,18 @@
     <div class="container">
 
       <header class="page_header">
-        <img class="logo" src="images/beequip-logo.png" alt="beequip logo black and white" height="40px">
+        <img class="logo" src="images/beequip-logo.png" alt="beequip logo black and white">
         <nav class="navbar_menu">
           <!-- Navigation starts as empty UL that will be populated with JS -->
           <ul id="navbar_list"></ul>
+          <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+            <img class="hamburger-icon" src="images/hamburger.png" alt="purple hamburger menu">
+          </a>
         </nav>
       </header>
 
       <section id="introduction" data-nav="Intro">
-        <img src="images/Pile-of-gold.gif" alt="pile of gold" height="150px">
+        <img class="gold" src="images/Pile-of-gold.gif" alt="pile of gold">
         <h1>Want to know whether your equipment is worth on a pile of gold…?</h1>
         <h1>Check out our valuator below</h1>
       </section>
@@ -45,7 +47,10 @@
           <h1>&nbsphours on the meter, worth?</h1>
         </div>
         <div class="calculator-input">
-          <h1>Placeholder value €€€</h1>
+          <button type="button" class="button" onclick="calculateValue()">Calculate</button>
+        </div>
+        <div class="calculator-input">
+          <span id="equipmentValue">&#x20AC; -</span>
         </div>
         <div class="calculator-input">
           <h1>Want a more precise valuation?</h1>
@@ -57,22 +62,22 @@
           Brand, type, year of make and meter reads only get you so far
           <br>want a precise valuation? Fill the form below!
         </h2>
-        <form>
-          <div class="">
+        <form class="expert-valuation-form">
+          <div class="file-upload">
             <label>Upload the original invoice</label>
-            <input type="file" class="">
+            <input type="file" class="file-upload-button">
           </div>
-          <div class="">
+          <div class="file-upload">
             <label>Upload a list attachements</label>
-            <input type="file" class="">
+            <input type="file" class="file-upload-button">
           </div>
-          <div class="">
+          <div class="file-upload">
             <label>Upload a list of repairs and maintenance</label>
-            <input type="file" class="">
+            <input type="file" class="file-upload-button">
           </div>
-          <div class="">
+          <div class="file-upload">
             <label>Upload photos of your equipment</label>
-            <input type="file" class="">
+            <input type="file" class="file-upload-button">
           </div>
           <div class="">
             <label>Anything else you want to share</label>
@@ -83,7 +88,7 @@
             <input type="email" class="" aria-describedby="emailHelp">
             <small id="emailHelp" class="">We'll never share your email with anyone else.</small>
           </div>
-          <button type="submit" class="">Submit</button>
+          <button type="submit" class="button">Submit</button>
         </form>
       </section>
 

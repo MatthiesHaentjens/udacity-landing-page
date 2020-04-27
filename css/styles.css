@@ -32,6 +32,11 @@ body {
 
 .logo {
   padding: 5px 0px 0px 10px;
+  height: 40px;
+}
+
+.hamburger {
+  display: none;
 }
 
 #navbar_list {
@@ -43,11 +48,7 @@ body {
 #navbar_list li {
   padding: 0px 10px 0px 10px;
   text-decoration: none;
-}
-
-#navbar_list li a {
-  text-decoration: none;
-  color: white;
+  font-size: 20px;
 }
 
 #introduction {
@@ -58,6 +59,12 @@ body {
   align-items: center;
   padding: 30px;
   color: #fff;
+  padding: 10px;
+}
+
+.gold {
+  height: 150px;
+  padding-top: 20px;
 }
 
 #calculator {
@@ -66,12 +73,34 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: white;
+  padding: 10px;
 }
 
 .calculator-input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.form-control {
+  padding: 10px;
+  border-color: gray;
+}
+
+.button {
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#equipmentValue {
+  font-size: 25px;
+  color: green;
+  font-weight: bold;
 }
 
 #expert-valuation {
@@ -81,6 +110,53 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  padding: 10px;
+}
+
+.expert-valuation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.file-upload-button {
+  color: transparent;
+}
+
+.file-upload-button::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.file-upload-button::before {
+  content: 'Select some files';
+  display: inline-block;
+  background: purple;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+.file-upload-button:hover::before {
+  border-color: black;
+}
+
+.file-upload-button:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
 #how-does-it-work {
@@ -90,6 +166,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: white;
+  padding: 10px;
 }
 
 .item-wrapper {
@@ -111,11 +188,58 @@ body {
   grid-area: footer;
   padding: 30px;
   color: white;
-  border: 1px solid white;
 }
 
 .active {
   border: 4px solid;
   border-color: orange;
   box-shadow: 0 0 10px #9ecaed;
+}
+
+@media only screen and (max-width: 767px) {
+
+  body {
+      font-size: 85%;
+  }
+
+@media only screen and (max-width: 414px) {
+
+  body {
+      font-size: 70%;
+  }
+
+  #navbar_list {
+    display: none;
+  }
+
+  #navbar_list li {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    background-color: purple;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .hamburger-icon {
+    height: 30px;
+    background-color: black;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .gold {
+    height: 75px;
+    padding-top: 10px;
+  }
+
+  .calculator-input {
+    flex-direction: column;
+  }
+
 }

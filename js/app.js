@@ -18,9 +18,9 @@
  *
 */
 
-const navItems = document.getElementsByTagName('section');
-const navigationMenu = document.getElementById('navbar_list');
+const navbar = document.getElementById('navbar_list');
 const sections = document.querySelectorAll('section');
+const equipmentValue = document.getElementById('equipmentValue');
 
 // /**
 //  * End Global Variables
@@ -28,6 +28,18 @@ const sections = document.querySelectorAll('section');
 //  *
 // */
 
+function myFunction() {
+  var x = document.getElementById("navbar_list");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function calculateValue() {
+  equipmentValue.innerHTML = "&#x20AC; 100.000";
+}
 
 /**
  * End Helper Functions
@@ -43,14 +55,15 @@ function buildMenu() {
   // eventListener referring that section to the navigation menu
   // in the header
 
-  for (let navItem of navItems) {
+  for (let section of sections) {
     const li = document.createElement('li');
-    let id = navItem.id;
-    let dataNav = navItem.dataset.nav;
-    let link = document.createTextNode(dataNav)
+    let id = section.id;
+    let nav = section.dataset.nav;
+    let link = document.createTextNode(nav);
     li.appendChild(link);
-    li.addEventListener("click", function() {goToPageSection(id)});
-    navigationMenu.appendChild(li);
+    li.setAttribute("name", id);
+    li.addEventListener("click", goToPageSection, true);
+    navbar.appendChild(li);
   }
 }
 
@@ -86,15 +99,17 @@ function setToActive() {
 
 function goToPageSection() {
 
-  id = getId()
+  const id = this.getAttribute("name");
   const section = document.getElementById(id);
-  const position = section.getBoundingClientRect().top
+  const position = section.getBoundingClientRect().top;
 
   // Scroll to anchor ID
   window.scrollTo({
     top: position,
     behavior: 'smooth'
   });
+
+  console.log(position);
 
 }
 
@@ -110,7 +125,7 @@ buildMenu();
 
 // Scroll to section on link click
 
-document.getElementById("navbar_list").li.addEventListener("click", function() {goToPageSection(id)});
+// document.getElementsByName('how-does-it-work').
 
 // Set sections as active
 
