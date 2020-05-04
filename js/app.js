@@ -125,7 +125,7 @@ buildMenu();
 
 // Scroll to section on link click
 
-// document.getElementsByName('how-does-it-work').
+document.querySelectorAll('li').removeEventListener("click", goToPageSection, true)
 
 // Set sections as active
 
