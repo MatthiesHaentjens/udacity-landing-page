@@ -25,12 +25,12 @@ Navigation: Navigation is built dynamically as an unordered list. - CHECK
 
 Section Active State: It should be clear which section is being viewed while scrolling through the page. - CHECK
 
-Scroll to Anchor: When clicking an item from the navigation menu, the link should scroll to the appropriate section.
+Scroll to Anchor: When clicking an item from the navigation menu, the link should scroll to the appropriate section. - CHECK
 
 Documentation
 
 README: The ReadMe file should have non-default text in it that is specific to this project.
-It doesn’t have to be thorough, but should have some basic information, and use correct markdown.
+It doesn’t have to be thorough, but should have some basic information, and use correct markdown. - CHECK
 
 Comments: Comments are present and effectively explain longer code procedure when necessary. - CHECK
 
@@ -49,7 +49,7 @@ Udacity Website Project Description
   - Think about how you’ll test whether a section is in the viewport. - CHECK
   - What actions are you performing that will cause interactivity with the DOM? - CHECK
 3. Build the navigation menu. This will dynamically create a navigation menu based on the sections of the page. This can be a particularly useful trick when you begin working with content management systems or APIs when you are uncertain of the items will be.
-  - Are you listening for an event for the navigation to build?
+  - Are you listening for an event for the navigation to build? - CHECK
   - Where are you placing the navigation? - CHECK
   - Where is the text for each navigation item coming from and where are you anchoring to? - CHECK
   - How are you going to add each navigation item to your menu? - CHECK
@@ -67,7 +67,7 @@ Udacity Website Project Description
 6. REFACTOR. At this point, your code should be working properly. Ideally, refactoring happens while you are developing, but as a new developer, you often don’t have the whole picture in your head to be able to do so properly. Let’s clean the project up.
   - Have you run your code through a linter? We request you still follow Udacity standards when the code is complete, but running it through an eslinter is going to help you get started in refactoring.
   - Are you using ES6 const and let? - CHECK
-  - Are all your functions using ES6 arrow functions?
+  - Are all your functions using ES6 arrow functions? - CHECK
   - Is your code DRY? Are there any pieces that would be better served as a helper function to avoid duplication?
   - How is your code structured? Have you created functions for the main functionality with properly scoped variables? Starting out it’s likely that you will have a globally scoped variables on occasion until you learn more about closures and design patterns. But placing your code into functions is a great way to make your code more readable and a way to avoid globally scoped variables.
   - Are you using the best method for your iterations?
