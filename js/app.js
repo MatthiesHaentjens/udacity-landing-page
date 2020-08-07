@@ -62,7 +62,6 @@ function buildMenu() {
     let link = document.createTextNode(nav);
     li.appendChild(link);
     li.setAttribute("name", id);
-    li.addEventListener("click", goToPageSection, true);
     navbar.appendChild(li);
   }
 }
@@ -95,21 +94,16 @@ function setToActive() {
   }
 };
 
-// Scroll to anchor ID using scrollTO event
+// Scroll to anchor ID using scrollIntoView event
 
 function goToPageSection() {
-
-  const id = this.getAttribute("name");
-  const section = document.getElementById(id);
-  const position = section.getBoundingClientRect().top;
-
-  // Scroll to anchor ID
-  window.scrollTo({
-    top: position,
-    behavior: 'smooth'
+  
+  navbar.addEventListener('click', function(e){
+    const pageSection = document.querySelector('#' + e.path[0].attributes.name.nodeValue)
+    pageSection.scrollIntoView();
+    //added to account for the header
+    window.scrollBy(0, -50);
   });
-
-  console.log(position);
 
 }
 
@@ -125,7 +119,7 @@ buildMenu();
 
 // Scroll to section on link click
 
-document.querySelectorAll('li').removeEventListener("click", goToPageSection, true)
+goToPageSection();
 
 // Set sections as active
 
